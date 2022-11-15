@@ -12,6 +12,7 @@ final class TalkPageHeaderView: SetupView {
         label.numberOfLines = 0
         label.font = UIFont.wmf_font(.semiboldFootnote, compatibleWithTraitCollection: traitCollection)
         label.adjustsFontForContentSizeCategory = true
+        label.accessibilityTraits = [.header]
         return label
     }()
 
@@ -21,6 +22,7 @@ final class TalkPageHeaderView: SetupView {
         label.numberOfLines = 4
         label.font = UIFont.wmf_font(.boldTitle1, compatibleWithTraitCollection: traitCollection)
         label.adjustsFontForContentSizeCategory = true
+        label.accessibilityTraits = [.header]
         return label
     }()
 
@@ -49,6 +51,7 @@ final class TalkPageHeaderView: SetupView {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.distribution = .fill
         stackView.alignment = .top
+        stackView.spacing = 12
         return stackView
     }()
 
@@ -87,6 +90,7 @@ final class TalkPageHeaderView: SetupView {
     lazy var projectSourceContainer: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.isAccessibilityElement = false
         return view
     }()
 
@@ -94,6 +98,7 @@ final class TalkPageHeaderView: SetupView {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
+        imageView.isAccessibilityElement = false
         return imageView
     }()
 
@@ -102,6 +107,7 @@ final class TalkPageHeaderView: SetupView {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 2
         view.layer.borderWidth = 1
+        view.isAccessibilityElement = false
         return view
     }()
 
@@ -113,6 +119,7 @@ final class TalkPageHeaderView: SetupView {
         label.baselineAdjustment = .alignCenters
         label.font = UIFont.wmf_font(.mediumCaption2)
         label.adjustsFontForContentSizeCategory = true
+        label.isAccessibilityElement = false
         return label
     }()
 
@@ -146,8 +153,6 @@ final class TalkPageHeaderView: SetupView {
     lazy var coffeeRollReadMoreButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        let title = WMFLocalizedString("talk-pages-coffee-roll-read-more", value: "Read more", comment: "Title of user and article talk pages button to read more of the coffee roll.")
-        button.setTitle(title, for: .normal)
         button.contentHorizontalAlignment = .trailing
         button.titleLabel?.font = UIFont.wmf_scaledSystemFont(forTextStyle: .body, weight: .medium, size: 15)
         button.titleLabel?.adjustsFontForContentSizeCategory = true
@@ -211,7 +216,6 @@ final class TalkPageHeaderView: SetupView {
             projectLanguageLabelContainer.bottomAnchor.constraint(equalTo: projectLanguageLabel.bottomAnchor, constant: 5),
 
             projectImageView.heightAnchor.constraint(equalTo: projectLanguageLabelContainer.heightAnchor),
-            projectImageView.widthAnchor.constraint(equalTo: projectImageView.widthAnchor),
 
             projectImageView.leadingAnchor.constraint(equalTo: projectSourceContainer.leadingAnchor),
             projectImageView.topAnchor.constraint(equalTo: projectSourceContainer.topAnchor, constant: 2),
@@ -247,8 +251,8 @@ final class TalkPageHeaderView: SetupView {
             coffeeRollLabel.topAnchor.constraint(equalTo: coffeeRollSeparator.topAnchor, constant: 12),
             coffeeRollLabel.bottomAnchor.constraint(equalTo: coffeeRollReadMoreButton.topAnchor, constant: -4),
 
-            coffeeRollReadMoreButton.leadingAnchor.constraint(equalTo: coffeeRollContainer.readableContentGuide.leadingAnchor),
-            coffeeRollReadMoreButton.trailingAnchor.constraint(equalTo: coffeeRollContainer.readableContentGuide.trailingAnchor),
+            coffeeRollReadMoreButton.leadingAnchor.constraint(equalTo: coffeeRollContainer.readableContentGuide.leadingAnchor, constant: 8),
+            coffeeRollReadMoreButton.trailingAnchor.constraint(equalTo: coffeeRollContainer.readableContentGuide.trailingAnchor, constant: -8),
             coffeeRollReadMoreButton.bottomAnchor.constraint(equalTo: coffeeRollContainer.bottomAnchor, constant: -8)
         ])
 
@@ -281,13 +285,23 @@ final class TalkPageHeaderView: SetupView {
     func configure(viewModel: TalkPageViewModel) {
         
         self.viewModel = viewModel
+        let languageCode = viewModel.siteURL.wmf_languageCode
         
-        typeLabel.text = viewModel.pageType == .article ? CommonStrings.talkPageTitleArticleTalk.localizedUppercase : CommonStrings.talkPageTitleUserTalk.localizedUppercase
+        let typeText = viewModel.pageType == .article ? CommonStrings.talkPageTitleArticleTalk(languageCode: languageCode).localizedUppercase : CommonStrings.talkPageTitleUserTalk(languageCode: languageCode).localizedUppercase
+        let projectName = viewModel.project.projectName(shouldReturnCodedFormat: false)
+        typeLabel.text = typeText
+        typeLabel.accessibilityLabel = "\(typeText). \(projectName)."
+        
         titleLabel.text = viewModel.headerTitle
         descriptionLabel.text = viewModel.headerDescription
 
         if viewModel.coffeeRollText != nil {
             updateCoffeeRollText()
+            
+            let languageCode = viewModel.siteURL.wmf_languageCode
+            let title = WMFLocalizedString("talk-pages-coffee-roll-read-more", languageCode: languageCode, value: "Read more", comment: "Title of user and article talk pages button to read more of the coffee roll.")
+            coffeeRollReadMoreButton.setTitle(title, for: .normal)
+            
             coffeeRollContainer.isHidden = false
             bottomSpacer.isHidden = true
         } else {
@@ -301,6 +315,7 @@ final class TalkPageHeaderView: SetupView {
             projectImageView.image = projectSourceImage
         } else {
             projectImageView.removeFromSuperview()
+            projectLanguageLabelContainer.leadingAnchor.constraint(equalTo: projectSourceContainer.leadingAnchor).isActive = true
         }
 
         if let projectLanguage = viewModel.projectLanguage {
@@ -318,6 +333,8 @@ final class TalkPageHeaderView: SetupView {
         } else {
             imageView.isHidden = true
         }
+        
+        updateSemanticContentAttribute(viewModel.semanticContentAttribute)
     }
 
     func updateLabelFonts() {
@@ -342,6 +359,32 @@ final class TalkPageHeaderView: SetupView {
         coffeeRollLabel.attributedText = coffeeRollAttributedText.removingInitialNewlineCharacters()
     }
     
+    private func updateSemanticContentAttribute(_ semanticContentAttribute: UISemanticContentAttribute) {
+        self.semanticContentAttribute = semanticContentAttribute
+        typeLabel.semanticContentAttribute = semanticContentAttribute
+        titleLabel.semanticContentAttribute = semanticContentAttribute
+        descriptionLabel.semanticContentAttribute = semanticContentAttribute
+        imageView.semanticContentAttribute = semanticContentAttribute
+        horizontalStackView.semanticContentAttribute = semanticContentAttribute
+        horizontalContainer.semanticContentAttribute = semanticContentAttribute
+        verticalStackView.semanticContentAttribute = semanticContentAttribute
+        bottomSpacer.semanticContentAttribute = semanticContentAttribute
+        secondaryVerticalStackView.semanticContentAttribute = semanticContentAttribute
+        projectSourceContainer.semanticContentAttribute = semanticContentAttribute
+        projectImageView.semanticContentAttribute = semanticContentAttribute
+        projectLanguageLabelContainer.semanticContentAttribute = semanticContentAttribute
+        projectLanguageLabel.semanticContentAttribute = semanticContentAttribute
+        coffeeRollSpacer.semanticContentAttribute = semanticContentAttribute
+        coffeeRollContainer.semanticContentAttribute = semanticContentAttribute
+        coffeeRollSeparator.semanticContentAttribute = semanticContentAttribute
+        coffeeRollLabel.semanticContentAttribute = semanticContentAttribute
+        coffeeRollReadMoreButton.semanticContentAttribute = semanticContentAttribute
+        
+        typeLabel.textAlignment = semanticContentAttribute == .forceRightToLeft ? NSTextAlignment.right : NSTextAlignment.left
+        titleLabel.textAlignment = semanticContentAttribute == .forceRightToLeft ? NSTextAlignment.right : NSTextAlignment.left
+        descriptionLabel.textAlignment = semanticContentAttribute == .forceRightToLeft ? NSTextAlignment.right : NSTextAlignment.left
+        coffeeRollLabel.textAlignment = semanticContentAttribute == .forceRightToLeft ? NSTextAlignment.right : NSTextAlignment.left
+    }
 }
 
 extension TalkPageHeaderView: Themeable {
@@ -374,6 +417,9 @@ extension TalkPageHeaderView: Themeable {
         coffeeRollSeparator.backgroundColor = theme.colors.tertiaryText
         coffeeRollReadMoreButton.setTitleColor(theme.colors.link, for: .normal)
         updateCoffeeRollText()
+        
+        // Need to set textView and label textAlignment in the hierarchy again, after their attributed strings are set to the correct theme.
+        updateSemanticContentAttribute(semanticContentAttribute)
     }
 
 }

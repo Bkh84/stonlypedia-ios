@@ -181,10 +181,8 @@ class TalkPageContainerViewController: ViewController, HintPresenting {
         
         self.theme = theme
 
-        if #available(iOS 14.0, *) {
-            navigationItem.backButtonDisplayMode = .generic
-            navigationItem.backButtonTitle = title
-        }
+        navigationItem.backButtonDisplayMode = .generic
+        navigationItem.backButtonTitle = title
     }
     
     @objc(userTalkPageContainerWithURL:dataStore:theme:)
@@ -536,9 +534,9 @@ private extension TalkPageContainerViewController {
         var headerText: String
         switch type {
         case .user:
-            headerText = CommonStrings.talkPageTitleUserTalk.localizedUppercase
+            headerText = CommonStrings.talkPageTitleUserTalk(languageCode: nil).localizedUppercase
         case .article:
-            headerText = CommonStrings.talkPageTitleArticleTalk.localizedUppercase
+            headerText = CommonStrings.talkPageTitleArticleTalk(languageCode: nil).localizedUppercase
         }
         
         let languageTextFormat = WMFLocalizedString("talk-page-info-active-conversations", value: "Active conversations on %1$@ Wikipedia", comment: "This information label is displayed at the top of a talk page discussion list. %1$@ is replaced by the language wiki they are using - for example, 'Active conversations on English Wikipedia'.")

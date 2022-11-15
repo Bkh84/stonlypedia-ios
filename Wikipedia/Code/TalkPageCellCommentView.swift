@@ -21,13 +21,8 @@ final class TalkPageCellCommentView: SetupView {
     lazy var replyButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle(CommonStrings.talkPageReply, for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.setImage(UIImage(systemName: "arrowshape.turn.up.left"), for: .normal)
-
-        button.contentEdgeInsets = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
-        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -2, bottom: 0, right: 2)
-        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: -2)
 
         button.setContentHuggingPriority(.required, for: .horizontal)
         button.setContentHuggingPriority(.required, for: .vertical)
@@ -52,6 +47,12 @@ final class TalkPageCellCommentView: SetupView {
     weak var linkDelegate: TalkPageTextViewLinkHandling?
     
     private var commentLeadingConstraint: NSLayoutConstraint?
+    
+    override var semanticContentAttribute: UISemanticContentAttribute {
+        didSet {
+            updateSemanticContentAttribute(semanticContentAttribute)
+        }
+    }
 
     // MARK: - Lifecycle
 
@@ -84,6 +85,31 @@ final class TalkPageCellCommentView: SetupView {
         self.viewModel = viewModel
         commentLeadingConstraint?.constant = viewModel.replyDepth > 0 ? 10 : 0
         replyDepthView.configure(viewModel: viewModel)
+        
+        let languageCode = viewModel.cellViewModel?.viewModel?.siteURL.wmf_languageCode
+        replyButton.setTitle(CommonStrings.talkPageReply(languageCode: languageCode), for: .normal)
+        let replyButtonAccessibilityLabel = CommonStrings.talkPageReplyAccessibilityText
+        replyButton.accessibilityLabel = String.localizedStringWithFormat(replyButtonAccessibilityLabel, viewModel.author)
+    }
+    
+    private func updateSemanticContentAttribute(_ semanticContentAttribute: UISemanticContentAttribute) {
+        commentTextView.semanticContentAttribute = semanticContentAttribute
+        replyButton.semanticContentAttribute = semanticContentAttribute
+        replyDepthView.semanticContentAttribute = semanticContentAttribute
+        
+        commentTextView.textAlignment = semanticContentAttribute == .forceRightToLeft ? NSTextAlignment.right : NSTextAlignment.left
+        
+        switch semanticContentAttribute {
+        case .forceRightToLeft:
+            replyButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
+            replyButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: -2)
+            replyButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: -2, bottom: 0, right: 2)
+        default:
+            replyButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
+            replyButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -2, bottom: 0, right: 2)
+            replyButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: -2)
+        }
+        
     }
     
     // MARK: - Actions
@@ -94,8 +120,65 @@ final class TalkPageCellCommentView: SetupView {
             return
         }
         
-        replyDelegate?.tappedReply(commentViewModel: viewModel)
+        replyDelegate?.tappedReply(commentViewModel: viewModel, accessibilityFocusView: commentTextView)
     }
+
+    // MARK: - Find in page
+
+    private func applyTextHighlightIfNecessary(theme: Theme) {
+        let activeHighlightBackgroundColor: UIColor = .yellow50
+        let backgroundHighlightColor: UIColor
+        let foregroundHighlightColor: UIColor
+
+        switch theme {
+        case .black, .dark:
+            backgroundHighlightColor = activeHighlightBackgroundColor.withAlphaComponent(0.6)
+            foregroundHighlightColor = theme.colors.midBackground
+        default:
+            backgroundHighlightColor = activeHighlightBackgroundColor.withAlphaComponent(0.4)
+            foregroundHighlightColor = theme.colors.primaryText
+        }
+
+        commentTextView.attributedText = NSMutableAttributedString(attributedString: commentTextView.attributedText).highlight(viewModel?.cellViewModel?.highlightText, backgroundColor: backgroundHighlightColor, foregroundColor: foregroundHighlightColor)
+
+        if let commentViewModel = viewModel, let activeResult = commentViewModel.cellViewModel?.activeHighlightResult {
+            switch activeResult.location {
+            case .reply(_, _, _, let id):
+                if id == commentViewModel.id {
+                    commentTextView.attributedText = NSMutableAttributedString(attributedString: commentTextView.attributedText).highlight(viewModel?.cellViewModel?.highlightText, backgroundColor: activeHighlightBackgroundColor, targetRange: activeResult.range)
+                }
+            default:
+                break
+            }
+        }
+    }
+
+    /// Frame converted to containing collection view
+    func frameForHighlight(result: TalkPageFindInPageSearchController.SearchResult) -> CGRect? {
+        guard let range = result.range else {
+            return nil
+        }
+
+        switch result.location {
+        case .reply:
+            guard let initialFrame = commentTextView.frame(of: range) else {
+                return nil
+            }
+            return commentTextView.convert(initialFrame, to: rootCollectionView())
+        default:
+            return nil
+        }
+    }
+
+    /// Containing collection view
+    private func rootCollectionView() -> UIView? {
+        var sv = superview
+        while !(sv is UICollectionView) {
+            sv = sv?.superview
+        }
+        return sv
+    }
+
 
 }
 
@@ -103,10 +186,11 @@ extension TalkPageCellCommentView: Themeable {
 
     func apply(theme: Theme) {
         replyDepthView.apply(theme: theme)
-        
-        commentTextView.attributedText = viewModel?.text.byAttributingHTML(with: .callout, boldWeight: .semibold, matching: traitCollection, color: theme.colors.primaryText, linkColor: theme.colors.link, handlingLists: true, handlingSuperSubscripts: true)
+
+        commentTextView.attributedText = viewModel?.commentAttributedString(traitCollection: traitCollection, theme: theme)
         commentTextView.backgroundColor = theme.colors.paperBackground
-        
+        applyTextHighlightIfNecessary(theme: theme)
+
         replyButton.tintColor = theme.colors.link
         replyButton.setTitleColor(theme.colors.link, for: .normal)
     }

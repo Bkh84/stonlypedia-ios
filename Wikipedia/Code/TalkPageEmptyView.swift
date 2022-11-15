@@ -41,6 +41,7 @@ final class TalkPageEmptyView: SetupView {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.contentInsetAdjustmentBehavior = .never
         scrollView.automaticallyAdjustsScrollIndicatorInsets = false
+        scrollView.showsVerticalScrollIndicator = true
         return scrollView
     }()
 
@@ -124,22 +125,23 @@ final class TalkPageEmptyView: SetupView {
 
         scrollView.addSubview(stackView)
 
-        stackView.addArrangedSubview(VerticalSpacerView.spacerWith(space: 20))
+        stackView.addArrangedSubview(VerticalSpacerView.spacerWith(space: 12))
 
         stackView.addArrangedSubview(imageStack)
-        imageStack.addArrangedSubview(HorizontalSpacerView.spacerWith(space: 36))
+        imageStack.addArrangedSubview(HorizontalSpacerView.spacerWith(space: 64))
         imageStack.addArrangedSubview(imageView)
-        imageStack.addArrangedSubview(HorizontalSpacerView.spacerWith(space: 36))
+        imageStack.addArrangedSubview(HorizontalSpacerView.spacerWith(space: 64))
 
         stackView.addArrangedSubview(headerStack)
-        headerStack.addArrangedSubview(HorizontalSpacerView.spacerWith(space: 51))
+        headerStack.addArrangedSubview(HorizontalSpacerView.spacerWith(space: 32))
         headerStack.addArrangedSubview(headerLabel)
-        headerStack.addArrangedSubview(HorizontalSpacerView.spacerWith(space: 51))
+        headerStack.addArrangedSubview(HorizontalSpacerView.spacerWith(space: 32))
 
         stackView.addArrangedSubview(bodyStack)
-        bodyStack.addArrangedSubview(HorizontalSpacerView.spacerWith(space: 51))
+        bodyStack.addArrangedSubview(HorizontalSpacerView.spacerWith(space: 32))
         bodyStack.addArrangedSubview(bodyLabel)
-        bodyStack.addArrangedSubview(HorizontalSpacerView.spacerWith(space: 51))
+        bodyStack.addArrangedSubview(HorizontalSpacerView.spacerWith(space: 32))
+
 
         stackView.addArrangedSubview(buttonStack)
         buttonStack.addArrangedSubview(HorizontalSpacerView.spacerWith(space: 20))
@@ -148,9 +150,9 @@ final class TalkPageEmptyView: SetupView {
 
         stackView.addArrangedSubview(VerticalSpacerView.spacerWith(space: 20))
 
-        stackView.setCustomSpacing(32, after: imageStack)
-        stackView.setCustomSpacing(16, after: headerStack)
-        stackView.setCustomSpacing(28, after: bodyStack)
+        stackView.setCustomSpacing(8, after: imageStack)
+        stackView.setCustomSpacing(12, after: headerStack)
+        stackView.setCustomSpacing(16, after: bodyStack)
 
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: topAnchor),
@@ -159,13 +161,20 @@ final class TalkPageEmptyView: SetupView {
             scrollView.bottomAnchor.constraint(equalTo: bottomAnchor),
 
             stackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            stackView.leadingAnchor.constraint(equalTo: scrollView.readableContentGuide.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: scrollView.readableContentGuide.trailingAnchor),
             stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            stackView.widthAnchor.constraint(equalTo: scrollView.readableContentGuide.widthAnchor),
 
             actionButton.heightAnchor.constraint(greaterThanOrEqualToConstant: 42)
         ])
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if scrollView.bounces {
+            scrollView.flashScrollIndicators()
+        }
     }
 
     func configure(viewModel: TalkPageViewModel) {
@@ -190,6 +199,26 @@ final class TalkPageEmptyView: SetupView {
             bodyLabel.attributedText = NSMutableAttributedString(string: String.localizedStringWithFormat(LocalizedStrings.userBody, viewModel.headerTitle), attributes: [.paragraphStyle: bodyLineHeightAttribute])
             actionButton.setTitle(LocalizedStrings.startDiscussion, for: .normal)
         }
+        
+        let semanticContentAttribute = viewModel.semanticContentAttribute
+        updateSemanticContentAttribute(semanticContentAttribute)
+    }
+    
+    private func updateSemanticContentAttribute(_ semanticContentAttribute: UISemanticContentAttribute) {
+        
+        container.semanticContentAttribute = semanticContentAttribute
+        imageView.semanticContentAttribute = semanticContentAttribute
+        headerLabel.semanticContentAttribute = semanticContentAttribute
+        bodyLabel.semanticContentAttribute = semanticContentAttribute
+        actionButton.semanticContentAttribute = semanticContentAttribute
+        stackView.semanticContentAttribute = semanticContentAttribute
+        imageStack.semanticContentAttribute = semanticContentAttribute
+        headerStack.semanticContentAttribute = semanticContentAttribute
+        bodyStack.semanticContentAttribute = semanticContentAttribute
+        buttonStack.semanticContentAttribute = semanticContentAttribute
+
+        headerLabel.textAlignment = semanticContentAttribute == .forceRightToLeft ? NSTextAlignment.right : NSTextAlignment.left
+        bodyLabel.textAlignment = semanticContentAttribute == .forceRightToLeft ? NSTextAlignment.right : NSTextAlignment.left
     }
 
 }

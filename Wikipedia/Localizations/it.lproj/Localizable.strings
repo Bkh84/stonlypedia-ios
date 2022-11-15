@@ -719,10 +719,13 @@
 "table-of-contents-close-accessibility-hint" = "Chiudi";
 "table-of-contents-close-accessibility-label" = "Chiudi l'indice";
 "table-of-contents-heading" = "Contenuti";
+"talk-page-active-users-accessibilty-label" = "{{PLURAL:$1|$1 utente attivo|$1 utenti attivi}}";
 "talk-page-add-discussion-accessibility-label" = "Aggiungi discussione";
 "talk-page-add-topic-button" = "Aggiungi argomento";
 "talk-page-discussion-read-accessibility-label" = "Letta";
 "talk-page-discussion-unread-accessibility-label" = "Non lette";
+"talk-page-error-loading-subtitle" = "Qualcosa è andato storto.";
+"talk-page-error-loading-title" = "Impossibile caricare la pagina di discussione";
 "talk-page-error-unable-to-post-reply" = "Nessuna connessione a internet. Impossibile pubblicare la risposta.";
 "talk-page-error-unable-to-post-topic" = "Nessuna connessione a internet. Impossibile pubblicare la risposta.";
 "talk-page-find-in-page-button" = "Trova nella pagina";
@@ -740,7 +743,10 @@
 "talk-page-new-topic-body-placeholder-text" = "Scrivi una nuova discussione";
 "talk-page-new-topic-success-text" = "La tua discussione è stata pubblicata con successo";
 "talk-page-new-topic-title" = "Nuova discussione";
+"talk-page-publish-topic-error-title" = "Impossibile pubblicare un nuovo argomento.";
+"talk-page-replies-count-accessibilty-label" = "{{PLURAL:$1|$1 risposta|$1 risposte}}";
 "talk-page-reply-button" = "Rispondi";
+"talk-page-reply-button-accessibility-label" = "Rispondi a $1";
 "talk-page-reply-placeholder-format" = "Rispondi a $1";
 "talk-page-reply-title" = "Rispondi";
 "talk-page-revision-history" = "Cronologia";
@@ -760,10 +766,12 @@
 "talk-pages-reply-compose-close-confirmation-title" = "Sei sicuro di voler annullare questo nuova risposta?";
 "talk-pages-topic-added-alert-title" = "Il tuo argomento è stato aggiunto";
 "talk-pages-topic-compose-body-placeholder" = "Descrizione";
+"talk-pages-topic-compose-body-placeholder-accessibility" = "Descrizione argomento";
 "talk-pages-topic-compose-close-confirmation-discard" = "Annulla risposta";
 "talk-pages-topic-compose-close-confirmation-title" = "Sei sicuro di voler annullare questo nuovo argomento?";
 "talk-pages-topic-compose-navbar-title" = "Argomento";
 "talk-pages-topic-compose-title-placeholder" = "Titolo dell'argomento";
+"talk-pages-topic-reply-onboarding-body-note-ios15" = "Per favore sii gentile, siamo tutti umani qui.";
 "talk-pages-topic-reply-onboarding-title" = "Pagine di discussione";
 "talk-pages-view-title" = "Discussione";
 "theme-black-display-name" = "Nero";

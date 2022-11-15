@@ -34,6 +34,7 @@ final class TalkPageCellReplyDepthIndicator: SetupView {
         label.lineBreakMode = .byWordWrapping
         label.setContentCompressionResistancePriority(.required, for: .horizontal)
         label.setContentHuggingPriority(.required, for: .horizontal)
+        label.isAccessibilityElement = false
         return label
     }()
     
@@ -44,6 +45,12 @@ final class TalkPageCellReplyDepthIndicator: SetupView {
     }()
     
     var depthLabelTrailingConstraint: NSLayoutConstraint?
+    
+    override var semanticContentAttribute: UISemanticContentAttribute {
+        didSet {
+            updateSemanticContentAttribute(semanticContentAttribute)
+        }
+    }
 
     // MARK: - Lifecycle
 
@@ -90,6 +97,9 @@ final class TalkPageCellReplyDepthIndicator: SetupView {
         
         depth = viewModel.replyDepth
         
+        isAccessibilityElement = true
+        accessibilityLabel = String.localizedStringWithFormat(WMFLocalizedString("talk-page-reply-depth-accessibility-label", value: "Reply depth: %1$d", comment: "Accessibility label for the reply depth indicator. This indicator suggests which reply the text is replying to. %1$d is replaced with the depth number."), depth)
+        
         let numberOfLinesToDraw = min(depth, maxLines)
         guard numberOfLinesToDraw > 0 else {
             return
@@ -117,6 +127,14 @@ final class TalkPageCellReplyDepthIndicator: SetupView {
         depthLabelContainer.isHidden = numberRemaining == 0
         depthLabelTrailingConstraint?.isActive = numberRemaining > 0
     }
+    
+    private func updateSemanticContentAttribute(_ semanticContentAttribute: UISemanticContentAttribute) {
+        stackView.semanticContentAttribute = semanticContentAttribute
+        depthLabel.semanticContentAttribute = semanticContentAttribute
+        depthLabelContainer.semanticContentAttribute = semanticContentAttribute
+        
+        depthLabel.textAlignment = semanticContentAttribute == .forceRightToLeft ? NSTextAlignment.right : NSTextAlignment.left
+    }
 }
 
 extension TalkPageCellReplyDepthIndicator: Themeable {
@@ -124,9 +142,9 @@ extension TalkPageCellReplyDepthIndicator: Themeable {
     func apply(theme: Theme) {
         self.theme = theme
         for line in stackView.arrangedSubviews {
-            line.backgroundColor = theme.colors.depthMarker
+            line.backgroundColor = theme.colors.distanceBorder
         }
-        depthLabel.textColor = theme.colors.depthMarker
+        depthLabel.textColor = theme.colors.distanceBorder
         depthLabelContainer.backgroundColor = theme.colors.paperBackground
     }
 
