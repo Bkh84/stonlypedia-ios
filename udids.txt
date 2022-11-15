@@ -1,0 +1,3 @@
+Device ID	Device Name	Device Platform
+00008030-001871dc0a7a802e	remy.baroukh@stonly.com - iPhone 11	ios
+56b21510a6a38180d5eda4a00207b8bd52a23d82	amadour@pixelserious.com - iPhone 5S (Global)	ios
