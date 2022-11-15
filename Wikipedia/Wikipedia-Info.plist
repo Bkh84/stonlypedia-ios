@@ -7,6 +7,8 @@
 		<string>org.wikimedia.wikipedia.appRefresh</string>
 		<string>org.wikimedia.wikipedia.databaseHousekeeper</string>
 	</array>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -22,7 +24,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>7.0.0</string>
+	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -38,13 +40,28 @@
 				<string>wikipedia-official</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.stonly</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>stonly-stonlypedia</string>
+				<string>stonly-zhxao6ruqn</string>
+				<string>stonly-v0qfld6cbr</string>
+				<string>stonly-0fnuhbe8pr</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>0</string>
+	<string>1</string>
 	<key>CoreSpotlightContinuation</key>
 	<true/>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>mailto</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysUsageDescription</key>
@@ -67,8 +84,6 @@
 		<string>org.wikimedia.wikipedia.article</string>
 		<string>org.wikimedia.wikipedia.searchresults</string>
 	</array>
-	<key>UIApplicationShortcutWidget</key>
-	<string>$(PRODUCT_BUNDLE_IDENTIFIER).TopReadWidget</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
@@ -101,12 +116,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>mailto</string>
-	</array>
-	<key>CADisableMinimumFrameDurationOnPhone</key>
-	<true/>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
 </dict>

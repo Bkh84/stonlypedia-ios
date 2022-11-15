@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>StringsTable</key>
+	<string>Root</string>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Stonly</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Custom Widget ID</string>
+			<key>Key</key>
+			<string>StonlyCustomWidgetIDEnabled</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Custom Widget ID</string>
+			<key>Key</key>
+			<string>StonlyCustomWidgetID</string>
+			<key>DefaultValue</key>
+			<string>aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee</string>
+			<key>IsSecure</key>
+			<false/>
+			<key>KeyboardType</key>
+			<string>Alphabet</string>
+			<key>AutocapitalizationType</key>
+			<string>None</string>
+			<key>AutocorrectionType</key>
+			<string>No</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Environment</string>
+			<key>Key</key>
+			<string>StonlyEnvironment</string>
+			<key>DefaultValue</key>
+			<string>production</string>
+			<key>Values</key>
+			<array>
+				<string>production</string>
+				<string>staging</string>
+				<string>test</string>
+			</array>
+			<key>Titles</key>
+			<array>
+				<string>Production</string>
+				<string>Staging (requires VPN)</string>
+				<string>Test</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Enable Custom API Host</string>
+			<key>Key</key>
+			<string>StonlyApiHostEnabled</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Custom API Host &amp; Port</string>
+			<key>Key</key>
+			<string>StonlyApiHost</string>
+			<key>DefaultValue</key>
+			<string>https://api.stonly.com</string>
+			<key>IsSecure</key>
+			<false/>
+			<key>KeyboardType</key>
+			<string>URL</string>
+			<key>AutocapitalizationType</key>
+			<string>None</string>
+			<key>AutocorrectionType</key>
+			<string>No</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Enable Custom Widget Host</string>
+			<key>Key</key>
+			<string>StonlyWidgetHostEnabled</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Custom Widget Host &amp; Port</string>
+			<key>Key</key>
+			<string>StonlyWidgetHost</string>
+			<key>DefaultValue</key>
+			<string>https://stonly.com</string>
+			<key>IsSecure</key>
+			<false/>
+			<key>KeyboardType</key>
+			<string>URL</string>
+			<key>AutocapitalizationType</key>
+			<string>None</string>
+			<key>AutocorrectionType</key>
+			<string>No</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Capture (2-finger double tap)</string>
+			<key>Key</key>
+			<string>StonlyManualCaptureEnabled</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
+	</array>
+</dict>
+</plist>

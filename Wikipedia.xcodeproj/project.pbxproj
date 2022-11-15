@@ -11,7 +11,6 @@
 		00021DE524D48EFD00476F97 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00021DE424D48EFD00476F97 /* SwiftUI.framework */; };
 		00021DE824D48EFD00476F97 /* Widgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00021DE724D48EFD00476F97 /* Widgets.swift */; };
 		00021DEA24D48EFE00476F97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00021DE924D48EFE00476F97 /* Assets.xcassets */; };
-		00021DEE24D48EFE00476F97 /* WidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 00021DE124D48EFD00476F97 /* WidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		00021E0424D4A42A00476F97 /* PictureOfTheDayWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00021E0324D4A42A00476F97 /* PictureOfTheDayWidget.swift */; };
 		0010F93927A49C7700D77848 /* HorizontalSpacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010F93827A49C7700D77848 /* HorizontalSpacerView.swift */; };
 		0010F93A27A49C7700D77848 /* HorizontalSpacerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010F93827A49C7700D77848 /* HorizontalSpacerView.swift */; };
@@ -376,7 +375,6 @@
 		0E728D4C1DAEEE910074EB4B /* CLLocation+WMFComparison.h in Headers */ = {isa = PBXBuildFile; fileRef = BCCFC44A1C84BAE0009D3613 /* CLLocation+WMFComparison.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E8380651D64989F0076EDE4 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8380641D64989F0076EDE4 /* NotificationCenter.framework */; };
 		0E83806C1D64989F0076EDE4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E83806A1D64989F0076EDE4 /* MainInterface.storyboard */; };
-		0E8380701D64989F0076EDE4 /* ContinueReadingWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0E8380631D64989F0076EDE4 /* ContinueReadingWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0E8768361DDE002C00B8CACD /* WMFAnnouncementsContentSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E8768341DDE002C00B8CACD /* WMFAnnouncementsContentSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E8768371DDE002C00B8CACD /* WMFAnnouncementsContentSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8768351DDE002C00B8CACD /* WMFAnnouncementsContentSource.m */; };
 		0E87683A1DDE00D600B8CACD /* WMFAnnouncementsFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E8768381DDE00D600B8CACD /* WMFAnnouncementsFetcher.h */; };
@@ -594,7 +592,6 @@
 		6761AEF82707E34F00E47BAD /* NotificationsCenterModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6761AEF62707E34F00E47BAD /* NotificationsCenterModelController.swift */; };
 		6761AEF92707E34F00E47BAD /* NotificationsCenterModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6761AEF62707E34F00E47BAD /* NotificationsCenterModelController.swift */; };
 		6761AEFA2707E34F00E47BAD /* NotificationsCenterModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6761AEF62707E34F00E47BAD /* NotificationsCenterModelController.swift */; };
-		676C864B26D40AEB00A704C1 /* NotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 676C864426D40AEA00A704C1 /* NotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		676C867026D416FB00A704C1 /* NotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 676C864426D40AEA00A704C1 /* NotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		676C867326D4170100A704C1 /* NotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 676C864426D40AEA00A704C1 /* NotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		676C868126D4545300A704C1 /* WMF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D844D96C1D6CB2600042D692 /* WMF.framework */; };
@@ -2000,6 +1997,7 @@
 		83FBE9761F6181E00026C7EB /* ShareAFactActivityImageItemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FBE9741F6181E00026C7EB /* ShareAFactActivityImageItemProvider.swift */; };
 		83FBE9771F6181E00026C7EB /* ShareAFactActivityImageItemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FBE9741F6181E00026C7EB /* ShareAFactActivityImageItemProvider.swift */; };
 		83FBE9781F6181E00026C7EB /* ShareAFactActivityImageItemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FBE9741F6181E00026C7EB /* ShareAFactActivityImageItemProvider.swift */; };
+		8C5B5B13291CFD06004841EA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8C5B5B12291CFD06004841EA /* Settings.bundle */; };
 		982800D624D302BF004B1850 /* EventPlatformClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982800D524D302BF004B1850 /* EventPlatformClient.swift */; };
 		A452F9F824081A5500D8ED09 /* MockCLLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A452F9F624081A5500D8ED09 /* MockCLLocationManager.swift */; };
 		A452F9F924081A5500D8ED09 /* MockCLHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A452F9F724081A5500D8ED09 /* MockCLHeading.swift */; };
@@ -2435,6 +2433,8 @@
 		BCCB813E1C110702008BC602 /* NSDate+WMFPOTDTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCB813C1C110702008BC602 /* NSDate+WMFPOTDTitle.m */; };
 		BCD3200A1C6EC6BC00317D08 /* NSTimeZone+WMFTestingUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD320091C6EC6BC00317D08 /* NSTimeZone+WMFTestingUtils.m */; };
 		BCD557BB1C45B1600060A51A /* UIApplication+VisualTestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD557BA1C45B1600060A51A /* UIApplication+VisualTestUtils.m */; };
+		C02412C9292318A200940053 /* Stonly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02412C8292318A200940053 /* Stonly.framework */; };
+		C02412CA292318A200940053 /* Stonly.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C02412C8292318A200940053 /* Stonly.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D4991439181D51DE00E6073C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4991438181D51DE00E6073C /* Foundation.framework */; };
 		D499143B181D51DE00E6073C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D499143A181D51DE00E6073C /* CoreGraphics.framework */; };
 		D499143D181D51DE00E6073C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D499143C181D51DE00E6073C /* UIKit.framework */; };
@@ -2605,7 +2605,6 @@
 		D84692E01D5E1E3F000A7058 /* TableOfContentsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84692DE1D5E1E3F000A7058 /* TableOfContentsHeader.swift */; };
 		D84692E11D5E1E3F000A7058 /* TableOfContentsHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D84692DF1D5E1E3F000A7058 /* TableOfContentsHeader.xib */; };
 		D8479FAE1F222FE90025FD7A /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8479FAD1F222FE90025FD7A /* Stickers.xcassets */; };
-		D8479FB21F222FE90025FD7A /* Wikipedia Stickers.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D8479FAB1F222FE80025FD7A /* Wikipedia Stickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D84B224D1DAFD0F7007C44AA /* WMFNotificationsController.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F1BF241D9C2AFB00036E71 /* WMFNotificationsController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D84B224E1DAFD0FC007C44AA /* WMFNotificationsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F1BF251D9C2AFB00036E71 /* WMFNotificationsController.m */; };
 		D84B224F1DAFD14D007C44AA /* WMFFaceDetectionCache.h in Headers */ = {isa = PBXBuildFile; fileRef = B0E805CF1C0CE5420065EBC0 /* WMFFaceDetectionCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -2672,7 +2671,6 @@
 		D85D34C61D74D07500845125 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8380641D64989F0076EDE4 /* NotificationCenter.framework */; };
 		D85D34C91D74D07500845125 /* WMFTodayTopReadWidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85D34C81D74D07500845125 /* WMFTodayTopReadWidgetViewController.swift */; };
 		D85D34CC1D74D07500845125 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D85D34CA1D74D07500845125 /* MainInterface.storyboard */; };
-		D85D34D01D74D07500845125 /* TopReadWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D85D34C51D74D07500845125 /* TopReadWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D85F56A2219C45C900AF3E13 /* URLComponents+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85F56A1219C45C900AF3E13 /* URLComponents+Extensions.swift */; };
 		D8619BA41FBB10240045C8BC /* ReadingList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8619B9E1FBB10240045C8BC /* ReadingList+CoreDataClass.swift */; };
 		D8619BA51FBB10240045C8BC /* ReadingList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8619B9F1FBB10240045C8BC /* ReadingList+CoreDataProperties.swift */; };
@@ -2931,7 +2929,6 @@
 		D8B3D7671EC34F5B00930C21 /* SaveButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B3D7651EC34F5B00930C21 /* SaveButtonsController.swift */; };
 		D8B3D7681EC34F5B00930C21 /* SaveButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B3D7651EC34F5B00930C21 /* SaveButtonsController.swift */; };
 		D8B3D7691EC34F5B00930C21 /* SaveButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B3D7651EC34F5B00930C21 /* SaveButtonsController.swift */; };
-		D8BD029F1F3A389F007AE7B2 /* FeaturedArticleWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D83FD2891EF4724700532B15 /* FeaturedArticleWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D8BD63BF1EA7E28700BBC082 /* SummaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD63BE1EA7E28700BBC082 /* SummaryExtensions.swift */; };
 		D8BDA8BE1E71B8C90031F4BF /* WMFDeleteBackwardReportingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01CFC5E1E70B00100B3546A /* WMFDeleteBackwardReportingTextField.swift */; };
 		D8BDA8BF1E71B8D10031F4BF /* String?+WMFExtras.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01CFC601E71069000B3546A /* String?+WMFExtras.swift */; };
@@ -3493,33 +3490,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		00021DEC24D48EFE00476F97 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D499142D181D51DE00E6073C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 00021DE024D48EFD00476F97;
-			remoteInfo = WidgetsExtension;
-		};
 		00AB75BF24D4E8FB0041056A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D499142D181D51DE00E6073C /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D844D96B1D6CB2600042D692;
 			remoteInfo = WMF;
-		};
-		0E83806E1D64989F0076EDE4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D499142D181D51DE00E6073C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0E8380621D64989F0076EDE4;
-			remoteInfo = ContinueReadingWidget;
-		};
-		676C864926D40AEB00A704C1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D499142D181D51DE00E6073C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 676C864326D40AEA00A704C1;
-			remoteInfo = NotificationServiceExtension;
 		};
 		676C867126D416FB00A704C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -3577,20 +3553,6 @@
 			remoteGlobalIDString = D83FD2881EF4724700532B15;
 			remoteInfo = FeaturedArticleWidget;
 		};
-		D8479FB01F222FE90025FD7A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D499142D181D51DE00E6073C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D8479FAA1F222FE80025FD7A;
-			remoteInfo = "Wikipedia Stickers";
-		};
-		D85D34CE1D74D07500845125 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D499142D181D51DE00E6073C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D85D34C41D74D07500845125;
-			remoteInfo = TopReadWidget;
-		};
 		D88DBBBA1D8B322400134A50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D499142D181D51DE00E6073C /* Project object */;
@@ -3604,13 +3566,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = D844D96B1D6CB2600042D692;
 			remoteInfo = WMF;
-		};
-		D8BD029D1F3A3892007AE7B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D499142D181D51DE00E6073C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D83FD2881EF4724700532B15;
-			remoteInfo = FeaturedArticleWidget;
 		};
 		D8CE24D91E698E2400DAE2E0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -3674,22 +3629,6 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0E8380771D64989F0076EDE4 /* Embed Foundation Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				00021DEE24D48EFE00476F97 /* WidgetsExtension.appex in Embed Foundation Extensions */,
-				D8BD029F1F3A389F007AE7B2 /* FeaturedArticleWidget.appex in Embed Foundation Extensions */,
-				676C864B26D40AEB00A704C1 /* NotificationServiceExtension.appex in Embed Foundation Extensions */,
-				D85D34D01D74D07500845125 /* TopReadWidget.appex in Embed Foundation Extensions */,
-				0E8380701D64989F0076EDE4 /* ContinueReadingWidget.appex in Embed Foundation Extensions */,
-				D8479FB21F222FE90025FD7A /* Wikipedia Stickers.appex in Embed Foundation Extensions */,
-			);
-			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B018501720BC847A00A508F1 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3707,6 +3646,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				D8FAC7DD1D6F88AB00C2A6BC /* WMF.framework in Embed Frameworks */,
+				C02412CA292318A200940053 /* Stonly.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -4635,6 +4575,7 @@
 		83F26B29220B62EC002D87A4 /* SectionEditorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionEditorButton.swift; sourceTree = "<group>"; };
 		83FBE96E1F6172ED0026C7EB /* ShareAFactActivityTextItemProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareAFactActivityTextItemProvider.swift; sourceTree = "<group>"; };
 		83FBE9741F6181E00026C7EB /* ShareAFactActivityImageItemProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareAFactActivityImageItemProvider.swift; sourceTree = "<group>"; };
+		8C5B5B12291CFD06004841EA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		982800D524D302BF004B1850 /* EventPlatformClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPlatformClient.swift; sourceTree = "<group>"; };
 		A452F9F624081A5500D8ED09 /* MockCLLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockCLLocationManager.swift; sourceTree = "<group>"; };
 		A452F9F724081A5500D8ED09 /* MockCLHeading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockCLHeading.swift; sourceTree = "<group>"; };
@@ -5086,6 +5027,7 @@
 		BCD557B91C45B1600060A51A /* UIApplication+VisualTestUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIApplication+VisualTestUtils.h"; path = "WikipediaUnitTests/Code/UIApplication+VisualTestUtils.h"; sourceTree = SOURCE_ROOT; };
 		BCD557BA1C45B1600060A51A /* UIApplication+VisualTestUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+VisualTestUtils.m"; path = "WikipediaUnitTests/Code/UIApplication+VisualTestUtils.m"; sourceTree = SOURCE_ROOT; };
 		BCF012321AD2FA38008D3675 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
+		C02412C8292318A200940053 /* Stonly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Stonly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4991435181D51DE00E6073C /* Wikipedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wikipedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4991438181D51DE00E6073C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D499143A181D51DE00E6073C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -5689,6 +5631,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C02412C9292318A200940053 /* Stonly.framework in Frameworks */,
 				D844D9731D6CB2600042D692 /* WMF.framework in Frameworks */,
 				83AF34F724D3341E000046D6 /* BackgroundTasks.framework in Frameworks */,
 				D8D553621DF1B63200B90177 /* QuartzCore.framework in Frameworks */,
@@ -8671,6 +8614,7 @@
 				0E10C4FD1C81046300CEB5C2 /* Wikipedia.entitlements */,
 				D8A42C2F1E815C1300D8E281 /* Wikipedia User Testing.entitlements */,
 				B0E808281C0D07EA0065EBC0 /* Wikipedia-Bridging-Header.h */,
+				8C5B5B12291CFD06004841EA /* Settings.bundle */,
 			);
 			name = "Supporting Files";
 			path = ..;
@@ -8944,6 +8888,7 @@
 		D4991437181D51DE00E6073C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C02412C8292318A200940053 /* Stonly.framework */,
 				83B019D524F6C31B0014B5EF /* WidgetKit.framework */,
 				83AF34F624D3341D000046D6 /* BackgroundTasks.framework */,
 				B09BE6A01FB3DA45007F52E3 /* WebKit.framework */,
@@ -9932,19 +9877,12 @@
 				D4991431181D51DE00E6073C /* Sources */,
 				D4991432181D51DE00E6073C /* Frameworks */,
 				D4991433181D51DE00E6073C /* Resources */,
-				0E8380771D64989F0076EDE4 /* Embed Foundation Extensions */,
 				D84581101D67572D00B09640 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				D88DBBBB1D8B322400134A50 /* PBXTargetDependency */,
-				0E83806F1D64989F0076EDE4 /* PBXTargetDependency */,
-				D85D34CF1D74D07500845125 /* PBXTargetDependency */,
-				D8BD029E1F3A3892007AE7B2 /* PBXTargetDependency */,
-				D8479FB11F222FE90025FD7A /* PBXTargetDependency */,
-				00021DED24D48EFE00476F97 /* PBXTargetDependency */,
-				676C864A26D40AEB00A704C1 /* PBXTargetDependency */,
 			);
 			name = Wikipedia;
 			productName = "Wikipedia-iOS";
@@ -10180,7 +10118,6 @@
 						TestTargetID = D4991434181D51DE00E6073C;
 					};
 					D4991434181D51DE00E6073C = {
-						DevelopmentTeam = AKK7J2GV64;
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -10569,6 +10506,7 @@
 				0E9B9E321CBF3225001E4C3C /* WMFImageGalleryDetailOverlayView.xib in Resources */,
 				7AE1D3331FCD057200393471 /* Saved.storyboard in Resources */,
 				B0C17B9321FAB048009ED5C3 /* AbuseFilterAlertView.xib in Resources */,
+				8C5B5B13291CFD06004841EA /* Settings.bundle in Resources */,
 				D8E27BAD1F82B54D00F9D2B3 /* RMessageDefaultDesign.json in Resources */,
 				B01EA07E2022856300813726 /* ScrollableEducationPanelView.xib in Resources */,
 				D84F2BFB1D2FEE6300963D42 /* WMFRandomDiceButton.html in Resources */,
@@ -14041,25 +13979,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		00021DED24D48EFE00476F97 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 00021DE024D48EFD00476F97 /* WidgetsExtension */;
-			targetProxy = 00021DEC24D48EFE00476F97 /* PBXContainerItemProxy */;
-		};
 		00AB75C024D4E8FB0041056A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D844D96B1D6CB2600042D692 /* WMF */;
 			targetProxy = 00AB75BF24D4E8FB0041056A /* PBXContainerItemProxy */;
-		};
-		0E83806F1D64989F0076EDE4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0E8380621D64989F0076EDE4 /* ContinueReadingWidget */;
-			targetProxy = 0E83806E1D64989F0076EDE4 /* PBXContainerItemProxy */;
-		};
-		676C864A26D40AEB00A704C1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 676C864326D40AEA00A704C1 /* NotificationServiceExtension */;
-			targetProxy = 676C864926D40AEB00A704C1 /* PBXContainerItemProxy */;
 		};
 		676C867226D416FB00A704C1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -14101,16 +14024,6 @@
 			target = D83FD2881EF4724700532B15 /* FeaturedArticleWidget */;
 			targetProxy = D83FD2AB1EF473E600532B15 /* PBXContainerItemProxy */;
 		};
-		D8479FB11F222FE90025FD7A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D8479FAA1F222FE80025FD7A /* Wikipedia Stickers */;
-			targetProxy = D8479FB01F222FE90025FD7A /* PBXContainerItemProxy */;
-		};
-		D85D34CF1D74D07500845125 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D85D34C41D74D07500845125 /* TopReadWidget */;
-			targetProxy = D85D34CE1D74D07500845125 /* PBXContainerItemProxy */;
-		};
 		D88DBBBB1D8B322400134A50 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D844D96B1D6CB2600042D692 /* WMF */;
@@ -14120,11 +14033,6 @@
 			isa = PBXTargetDependency;
 			target = D844D96B1D6CB2600042D692 /* WMF */;
 			targetProxy = D8A42A4F1E815A9C00D8E281 /* PBXContainerItemProxy */;
-		};
-		D8BD029E1F3A3892007AE7B2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D83FD2881EF4724700532B15 /* FeaturedArticleWidget */;
-			targetProxy = D8BD029D1F3A3892007AE7B2 /* PBXContainerItemProxy */;
 		};
 		D8CE24D81E698E2400DAE2E0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -15114,7 +15022,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 0;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = AKK7J2GV64;
+				DEVELOPMENT_TEAM = P82Q5GT2QQ;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_OPTIMIZATION_LEVEL = 3;
@@ -15659,7 +15567,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 0;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = AKK7J2GV64;
+				DEVELOPMENT_TEAM = P82Q5GT2QQ;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
@@ -16437,6 +16345,7 @@
 					"NS_ENFORCE_NSOBJECT_DESIGNATED_INITIALIZER=0",
 					"$(inherited)",
 					"WMF_APP_GROUP_IDENTIFIER=$(WMF_APP_GROUP_IDENTIFIER)",
+					"WMF_NO_APP_GROUP=1",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
@@ -16450,7 +16359,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_SWIFT_FLAGS = "-DDEBUG";
+				OTHER_SWIFT_FLAGS = "-DDEBUG -DWMF_NO_APP_GROUP";
 				SDKROOT = iphoneos;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -16504,6 +16413,7 @@
 					"$(inherited)",
 					"NS_BLOCK_ASSERTIONS=1",
 					"WMF_APP_GROUP_IDENTIFIER=$(WMF_APP_GROUP_IDENTIFIER)",
+					"WMF_NO_APP_GROUP=1",
 				);
 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -16539,7 +16449,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 0;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = AKK7J2GV64;
+				DEVELOPMENT_TEAM = P82Q5GT2QQ;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
@@ -16549,7 +16459,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = org.wikimedia.wikipedia;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stonly.example.wikipedia;
 				PRODUCT_MODULE_NAME = Wikipedia;
 				PRODUCT_NAME = Wikipedia;
 				RUN_CLANG_STATIC_ANALYZER = NO;
@@ -16569,7 +16479,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 0;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = AKK7J2GV64;
+				DEVELOPMENT_TEAM = P82Q5GT2QQ;
 				ENABLE_TESTABILITY = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_OPTIMIZATION_LEVEL = 3;
@@ -16582,7 +16492,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.wikimedia.wikipedia;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stonly.example.wikipedia;
 				PRODUCT_MODULE_NAME = Wikipedia;
 				PRODUCT_NAME = Wikipedia;
 				RUN_CLANG_STATIC_ANALYZER = NO;
@@ -17215,7 +17125,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 0;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = AKK7J2GV64;
+				DEVELOPMENT_TEAM = P82Q5GT2QQ;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
@@ -19147,7 +19057,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 0;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = AKK7J2GV64;
+				DEVELOPMENT_TEAM = P82Q5GT2QQ;
 				ENABLE_TESTABILITY = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_OPTIMIZATION_LEVEL = 3;
@@ -19442,7 +19352,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 0;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = AKK7J2GV64;
+				DEVELOPMENT_TEAM = P82Q5GT2QQ;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";

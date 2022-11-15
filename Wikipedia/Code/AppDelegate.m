@@ -7,6 +7,7 @@
 #import "UIApplicationShortcutItem+WMFShortcutItem.h"
 #import "Wikipedia-Swift.h"
 #import "WMFQuoteMacros.h"
+@import Stonly;
 
 static NSTimeInterval const WMFBackgroundFetchInterval = 10800; // 3 Hours
 static NSString *const WMFBackgroundAppRefreshTaskIdentifier = @"org.wikimedia.wikipedia.appRefresh";
@@ -76,6 +77,8 @@ static NSString *const WMFBackgroundDatabaseHousekeeperTaskIdentifier = @"org.wi
         [UIView setAnimationsEnabled:NO];
     }
 #endif
+    
+    StonlyWidget.widgetId = @"0041028e-a25b-11e9-a307-06e18af4fc90";
 
     [[NSUserDefaults standardUserDefaults] wmf_migrateFontSizeMultiplier];
     NSUserDefaults.standardUserDefaults.shouldRestoreNavigationStackOnResume = [self shouldRestoreNavigationStackOnResumeAfterBecomingActive:[NSDate date]];
@@ -165,6 +168,11 @@ static NSString *const WMFBackgroundDatabaseHousekeeperTaskIdentifier = @"org.wi
 - (BOOL)application:(UIApplication *)app
             openURL:(NSURL *)url
             options:(NSDictionary<NSString *, id> *)options {
+    if ([StonlyWidget handleURL:url]) {
+        return YES;
+        
+    }
+    
     NSUserActivity *activity = [NSUserActivity wmf_activityForWikipediaScheme:url] ?: [NSUserActivity wmf_activityForURL:url];
     if (activity) {
         [self.appViewController showSplashView];
