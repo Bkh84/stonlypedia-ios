@@ -41,6 +41,8 @@
 			</array>
 		</dict>
 		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
 			<key>CFBundleURLName</key>
 			<string>com.stonly</string>
 			<key>CFBundleURLSchemes</key>
@@ -49,6 +51,8 @@
 				<string>stonly-zhxao6ruqn</string>
 				<string>stonly-v0qfld6cbr</string>
 				<string>stonly-0fnuhbe8pr</string>
+				<string>stonly-zjhgfcrpqt</string>
+				<string>stonly-vfnf8ugzd0</string>
 			</array>
 		</dict>
 	</array>
