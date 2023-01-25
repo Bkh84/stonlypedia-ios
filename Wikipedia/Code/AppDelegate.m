@@ -78,7 +78,7 @@ static NSString *const WMFBackgroundDatabaseHousekeeperTaskIdentifier = @"org.wi
     }
 #endif
     
-    StonlyWidget.widgetId = @"0041028e-a25b-11e9-a307-06e18af4fc90";
+    StonlyWidget.widgetId = @"d5d69173-f883-11ec-9fb8-0ae9fa2a18a2";
 
     [[NSUserDefaults standardUserDefaults] wmf_migrateFontSizeMultiplier];
     NSUserDefaults.standardUserDefaults.shouldRestoreNavigationStackOnResume = [self shouldRestoreNavigationStackOnResumeAfterBecomingActive:[NSDate date]];

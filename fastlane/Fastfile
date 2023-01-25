@@ -4,7 +4,7 @@ firebase_app_id = "1:1008921881187:ios:02a2a355f68098947c6656"
 lane :build do
     get_certificates()
     get_provisioning_profile(adhoc: true, force: true)
-    build_app(export_method: "ad-hoc")
+    build_app(workspace: "StonlyPedia.xcworkspace", scheme:"Wikipedia", silent: true, export_method: "ad-hoc")
 end
 
 lane :download_udids do
@@ -24,6 +24,6 @@ lane :distribute do
     build
     firebase_app_distribution(
         app: firebase_app_id,
-        release_notes: "Try out this app!",
+        release_notes: "v0.1.12",
     )
 end

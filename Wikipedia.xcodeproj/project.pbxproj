@@ -2461,8 +2461,10 @@
 		BCCB813E1C110702008BC602 /* NSDate+WMFPOTDTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCB813C1C110702008BC602 /* NSDate+WMFPOTDTitle.m */; };
 		BCD3200A1C6EC6BC00317D08 /* NSTimeZone+WMFTestingUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD320091C6EC6BC00317D08 /* NSTimeZone+WMFTestingUtils.m */; };
 		BCD557BB1C45B1600060A51A /* UIApplication+VisualTestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD557BA1C45B1600060A51A /* UIApplication+VisualTestUtils.m */; };
-		C02412C9292318A200940053 /* Stonly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C02412C8292318A200940053 /* Stonly.framework */; };
-		C02412CA292318A200940053 /* Stonly.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C02412C8292318A200940053 /* Stonly.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C08E23762980AD4800BC0117 /* Stonly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C08E23672980AC8700BC0117 /* Stonly.framework */; };
+		C08E23772980AD4800BC0117 /* Stonly.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C08E23672980AC8700BC0117 /* Stonly.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C08E23802980B96000BC0117 /* Stonly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C08E23672980AC8700BC0117 /* Stonly.framework */; };
+		C08E23812980B96000BC0117 /* Stonly.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C08E23672980AC8700BC0117 /* Stonly.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D4991439181D51DE00E6073C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4991438181D51DE00E6073C /* Foundation.framework */; };
 		D499143B181D51DE00E6073C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D499143A181D51DE00E6073C /* CoreGraphics.framework */; };
 		D499143D181D51DE00E6073C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D499143C181D51DE00E6073C /* UIKit.framework */; };
@@ -3553,6 +3555,20 @@
 			remoteGlobalIDString = D4991434181D51DE00E6073C;
 			remoteInfo = Wikipedia;
 		};
+		C08E23662980AC8700BC0117 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C08E23612980AC8700BC0117 /* StonlyWidget.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8C7FD4CF276248E1001D23D8;
+			remoteInfo = Stonly;
+		};
+		C08E23682980AC8700BC0117 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C08E23612980AC8700BC0117 /* StonlyWidget.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8C7FD4D8276248E1001D23D8;
+			remoteInfo = StonlyWidgetTests;
+		};
 		D8479FB01F222FE90025FD7A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D499142D181D51DE00E6073C /* Project object */;
@@ -3639,7 +3655,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				D8FAC7DD1D6F88AB00C2A6BC /* WMF.framework in Embed Frameworks */,
-				C02412CA292318A200940053 /* Stonly.framework in Embed Frameworks */,
+				C08E23772980AD4800BC0117 /* Stonly.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3715,6 +3731,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				D8EC3FA51E9BDA35006712EB /* WMF.framework in Embed Frameworks */,
+				C08E23812980B96000BC0117 /* Stonly.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -5023,7 +5040,7 @@
 		BCD557B91C45B1600060A51A /* UIApplication+VisualTestUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIApplication+VisualTestUtils.h"; path = "WikipediaUnitTests/Code/UIApplication+VisualTestUtils.h"; sourceTree = SOURCE_ROOT; };
 		BCD557BA1C45B1600060A51A /* UIApplication+VisualTestUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+VisualTestUtils.m"; path = "WikipediaUnitTests/Code/UIApplication+VisualTestUtils.m"; sourceTree = SOURCE_ROOT; };
 		BCF012321AD2FA38008D3675 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
-		C02412C8292318A200940053 /* Stonly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Stonly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C08E23612980AC8700BC0117 /* StonlyWidget.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = StonlyWidget.xcodeproj; path = ../Stonly/StonlyWidget/StonlyWidget.xcodeproj; sourceTree = "<group>"; };
 		D4991435181D51DE00E6073C /* Wikipedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wikipedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4991438181D51DE00E6073C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D499143A181D51DE00E6073C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -5614,7 +5631,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C02412C9292318A200940053 /* Stonly.framework in Frameworks */,
+				C08E23762980AD4800BC0117 /* Stonly.framework in Frameworks */,
 				D844D9731D6CB2600042D692 /* WMF.framework in Frameworks */,
 				83AF34F724D3341E000046D6 /* BackgroundTasks.framework in Frameworks */,
 				D8D553621DF1B63200B90177 /* QuartzCore.framework in Frameworks */,
@@ -5684,6 +5701,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C08E23802980B96000BC0117 /* Stonly.framework in Frameworks */,
 				D8EC3F2E1E9BDA35006712EB /* WMF.framework in Frameworks */,
 				83AF34F824D33428000046D6 /* BackgroundTasks.framework in Frameworks */,
 				D8EC3F241E9BDA35006712EB /* QuartzCore.framework in Frameworks */,
@@ -8836,6 +8854,15 @@
 			name = "Face Detection";
 			sourceTree = "<group>";
 		};
+		C08E23622980AC8700BC0117 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C08E23672980AC8700BC0117 /* Stonly.framework */,
+				C08E23692980AC8700BC0117 /* StonlyWidgetTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D499142C181D51DE00E6073C = {
 			isa = PBXGroup;
 			children = (
@@ -8880,7 +8907,7 @@
 		D4991437181D51DE00E6073C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C02412C8292318A200940053 /* Stonly.framework */,
+				C08E23612980AC8700BC0117 /* StonlyWidget.xcodeproj */,
 				83B019D524F6C31B0014B5EF /* WidgetKit.framework */,
 				83AF34F624D3341D000046D6 /* BackgroundTasks.framework */,
 				B09BE6A01FB3DA45007F52E3 /* WebKit.framework */,
@@ -10246,6 +10273,12 @@
 			);
 			productRefGroup = D4991436181D51DE00E6073C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C08E23622980AC8700BC0117 /* Products */;
+					ProjectRef = C08E23612980AC8700BC0117 /* StonlyWidget.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D4991434181D51DE00E6073C /* Wikipedia */,
@@ -10264,6 +10297,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C08E23672980AC8700BC0117 /* Stonly.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Stonly.framework;
+			remoteRef = C08E23662980AC8700BC0117 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C08E23692980AC8700BC0117 /* StonlyWidgetTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = StonlyWidgetTests.xctest;
+			remoteRef = C08E23682980AC8700BC0117 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00021DDF24D48EFD00476F97 /* Resources */ = {
@@ -14885,10 +14935,13 @@
 					"NS_BLOCK_ASSERTIONS=1",
 				);
 				INFOPLIST_FILE = "Wikipedia/Wikipedia-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Wikipedia Test";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = v0.1.12;
 				PRODUCT_BUNDLE_IDENTIFIER = org.wikimedia.wikipedia;
 				PRODUCT_MODULE_NAME = Wikipedia;
 				PRODUCT_NAME = Wikipedia;
@@ -15426,10 +15479,13 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "Wikipedia/Wikipedia-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Wikipedia Test";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = v0.1.12;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = org.wikimedia.wikipedia;
 				PRODUCT_MODULE_NAME = Wikipedia;
@@ -16246,10 +16302,13 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "Wikipedia/Wikipedia-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Wikipedia Test";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = v0.1.12;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stonly.example.wikipedia;
 				PRODUCT_MODULE_NAME = Wikipedia;
@@ -16280,10 +16339,13 @@
 					"NS_BLOCK_ASSERTIONS=1",
 				);
 				INFOPLIST_FILE = "Wikipedia/Wikipedia-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Wikipedia Test";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = v0.1.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stonly.example.wikipedia;
 				PRODUCT_MODULE_NAME = Wikipedia;
 				PRODUCT_NAME = Wikipedia;
@@ -16675,10 +16737,13 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "Wikipedia/Local-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Wikipedia Test";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = v0.1.12;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = org.wikimedia.wikipedia;
 				PRODUCT_MODULE_NAME = Wikipedia;
@@ -17053,10 +17118,13 @@
 					"NS_BLOCK_ASSERTIONS=1",
 				);
 				INFOPLIST_FILE = "Wikipedia/Experimental-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Wikipedia Test";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = v0.1.12;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -17256,10 +17324,13 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "Wikipedia/Experimental-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Wikipedia Test";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = v0.1.12;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -17650,7 +17721,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 0;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = AKK7J2GV64;
+				DEVELOPMENT_TEAM = P82Q5GT2QQ;
 				ENABLE_TESTABILITY = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_OPTIMIZATION_LEVEL = 3;
@@ -17659,11 +17730,14 @@
 					"NS_BLOCK_ASSERTIONS=1",
 				);
 				INFOPLIST_FILE = "Wikipedia/Staging-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Wikipedia Test";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.wikimedia.wikipedia.tfbeta;
+				MARKETING_VERSION = v0.1.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stonly.example.wikipedia.test;
 				PRODUCT_MODULE_NAME = Wikipedia;
 				PRODUCT_NAME = Wikipedia;
 				RUN_CLANG_STATIC_ANALYZER = NO;
@@ -17887,17 +17961,20 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 0;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = AKK7J2GV64;
+				DEVELOPMENT_TEAM = P82Q5GT2QQ;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "Wikipedia/Staging-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Wikipedia Test";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = v0.1.12;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = org.wikimedia.wikipedia.tfbeta;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stonly.example.wikipedia.test;
 				PRODUCT_MODULE_NAME = Wikipedia;
 				PRODUCT_NAME = Wikipedia;
 				RUN_CLANG_STATIC_ANALYZER = NO;
@@ -18352,10 +18429,13 @@
 					"NS_BLOCK_ASSERTIONS=1",
 				);
 				INFOPLIST_FILE = "Wikipedia/User Testing-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Wikipedia Test";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = v0.1.12;
 				PRODUCT_BUNDLE_IDENTIFIER = org.wikimedia.wikipedia;
 				PRODUCT_MODULE_NAME = Wikipedia;
 				PRODUCT_NAME = Wikipedia;
@@ -18617,10 +18697,13 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "Wikipedia/User Testing-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Wikipedia Test";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = v0.1.12;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = org.wikimedia.wikipedia;
 				PRODUCT_MODULE_NAME = Wikipedia;

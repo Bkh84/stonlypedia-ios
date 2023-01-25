@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../Stonly/stonly-ios-framework/StonlyWidget/StonlyWidget.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "container:Wikipedia.xcodeproj">
    </FileRef>
 </Workspace>
