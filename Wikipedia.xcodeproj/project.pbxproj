@@ -2465,6 +2465,8 @@
 		C08E23772980AD4800BC0117 /* Stonly.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C08E23672980AC8700BC0117 /* Stonly.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C08E23802980B96000BC0117 /* Stonly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C08E23672980AC8700BC0117 /* Stonly.framework */; };
 		C08E23812980B96000BC0117 /* Stonly.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C08E23672980AC8700BC0117 /* Stonly.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C0B7E62729BE9B5000194283 /* Stonly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C08E23672980AC8700BC0117 /* Stonly.framework */; };
+		C0B7E62829BE9B6800194283 /* Stonly.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C08E23672980AC8700BC0117 /* Stonly.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D4991439181D51DE00E6073C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4991438181D51DE00E6073C /* Foundation.framework */; };
 		D499143B181D51DE00E6073C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D499143A181D51DE00E6073C /* CoreGraphics.framework */; };
 		D499143D181D51DE00E6073C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D499143C181D51DE00E6073C /* UIKit.framework */; };
@@ -3569,6 +3571,20 @@
 			remoteGlobalIDString = 8C7FD4D8276248E1001D23D8;
 			remoteInfo = StonlyWidgetTests;
 		};
+		C0B7E62529BE9AE000194283 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C08E23612980AC8700BC0117 /* StonlyWidget.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C7FD4CE276248E1001D23D8;
+			remoteInfo = Stonly;
+		};
+		C0B7E62B29BEA23A00194283 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C08E23612980AC8700BC0117 /* StonlyWidget.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C7FD4CE276248E1001D23D8;
+			remoteInfo = Stonly;
+		};
 		D8479FB01F222FE90025FD7A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D499142D181D51DE00E6073C /* Project object */;
@@ -3644,6 +3660,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				C0B7E62829BE9B6800194283 /* Stonly.framework in CopyFiles */,
 				B018501820BC84E300A508F1 /* WMF.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -5614,6 +5631,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0B7E62729BE9B5000194283 /* Stonly.framework in Frameworks */,
 				B018501620BC846600A508F1 /* WMF.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -7028,6 +7046,13 @@
 			name = PageHistory;
 			sourceTree = "<group>";
 		};
+		569242814F2B4D939BF7B991 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6714D6C9245A2B6A00CE5A4A /* Manual Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -8431,6 +8456,7 @@
 		BC45D58D1C32FD58007C72F3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				C011CA252A4D8ABF00ACC0B0 /* StonlySettings */,
 				6798035A24F94CAE00D765AA /* Article as a Living Document */,
 				67DC5BDB23A00DF500B03A84 /* Article */,
 				6782DB8F2343B691003FA21B /* Diff */,
@@ -8854,6 +8880,21 @@
 			name = "Face Detection";
 			sourceTree = "<group>";
 		};
+		C011CA252A4D8ABF00ACC0B0 /* StonlySettings */ = {
+			isa = PBXGroup;
+			children = (
+				C011CA262A4D8B2D00ACC0B0 /* View Controller */,
+			);
+			path = StonlySettings;
+			sourceTree = "<group>";
+		};
+		C011CA262A4D8B2D00ACC0B0 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
 		C08E23622980AC8700BC0117 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -8880,6 +8921,7 @@
 				D4991437181D51DE00E6073C /* Frameworks */,
 				D4991436181D51DE00E6073C /* Products */,
 				67D6C0152405A3E2005709B1 /* Recovered References */,
+				569242814F2B4D939BF7B991 /* Pods */,
 			);
 			sourceTree = "<group>";
 			usesTabs = 0;
@@ -9828,14 +9870,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B0606EC320AA6FF0006EC6B9 /* Build configuration list for PBXNativeTarget "WikipediaUITests" */;
 			buildPhases = (
+				B018501720BC847A00A508F1 /* CopyFiles */,
 				B0606EAA20AA6FF0006EC6B9 /* Sources */,
 				B0606EAB20AA6FF0006EC6B9 /* Frameworks */,
 				B0606EAC20AA6FF0006EC6B9 /* Resources */,
-				B018501720BC847A00A508F1 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C0B7E62629BE9AE000194283 /* PBXTargetDependency */,
 				B018501A20BC85E400A508F1 /* PBXTargetDependency */,
 				B0606EB420AA6FF0006EC6B9 /* PBXTargetDependency */,
 			);
@@ -9877,6 +9920,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C0B7E62C29BEA23A00194283 /* PBXTargetDependency */,
 				D88DBBBB1D8B322400134A50 /* PBXTargetDependency */,
 				D8479FB11F222FE90025FD7A /* PBXTargetDependency */,
 			);
@@ -9974,8 +10018,6 @@
 			dependencies = (
 			);
 			name = languages;
-			packageProductDependencies = (
-			);
 			productName = "codemirror-config";
 			productReference = D8B589A521CD05070027083A /* languages */;
 			productType = "com.apple.product-type.tool";
@@ -10037,7 +10079,7 @@
 					WMFWelcome,
 				);
 				LastSwiftMigration = 0700;
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1400;
 				ORGANIZATIONNAME = "Wikimedia Foundation";
 				TargetAttributes = {
@@ -13958,6 +14000,16 @@
 			target = D4991434181D51DE00E6073C /* Wikipedia */;
 			targetProxy = BCBDE0AD1AA76F19006BD29A /* PBXContainerItemProxy */;
 		};
+		C0B7E62629BE9AE000194283 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Stonly;
+			targetProxy = C0B7E62529BE9AE000194283 /* PBXContainerItemProxy */;
+		};
+		C0B7E62C29BEA23A00194283 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Stonly;
+			targetProxy = C0B7E62B29BEA23A00194283 /* PBXContainerItemProxy */;
+		};
 		D8479FB11F222FE90025FD7A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D8479FAA1F222FE80025FD7A /* Wikipedia Stickers */;
@@ -14941,7 +14993,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = v0.1.12;
+				MARKETING_VERSION = "v0.1.17-BETA1";
 				PRODUCT_BUNDLE_IDENTIFIER = org.wikimedia.wikipedia;
 				PRODUCT_MODULE_NAME = Wikipedia;
 				PRODUCT_NAME = Wikipedia;
@@ -15485,7 +15537,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = v0.1.12;
+				MARKETING_VERSION = "v0.1.17-BETA1";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = org.wikimedia.wikipedia;
 				PRODUCT_MODULE_NAME = Wikipedia;
@@ -16308,7 +16360,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = v0.1.12;
+				MARKETING_VERSION = "v0.1.17-BETA1";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stonly.example.wikipedia;
 				PRODUCT_MODULE_NAME = Wikipedia;
@@ -16345,7 +16397,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = v0.1.12;
+				MARKETING_VERSION = "v0.1.17-BETA1";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stonly.example.wikipedia;
 				PRODUCT_MODULE_NAME = Wikipedia;
 				PRODUCT_NAME = Wikipedia;
@@ -16743,7 +16795,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = v0.1.12;
+				MARKETING_VERSION = "v0.1.17-BETA1";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = org.wikimedia.wikipedia;
 				PRODUCT_MODULE_NAME = Wikipedia;
@@ -17124,7 +17176,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = v0.1.12;
+				MARKETING_VERSION = "v0.1.17-BETA1";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -17330,7 +17382,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = v0.1.12;
+				MARKETING_VERSION = "v0.1.17-BETA1";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -17736,7 +17788,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = v0.1.12;
+				MARKETING_VERSION = "v0.1.17-BETA1";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stonly.example.wikipedia.test;
 				PRODUCT_MODULE_NAME = Wikipedia;
 				PRODUCT_NAME = Wikipedia;
@@ -17972,7 +18024,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = v0.1.12;
+				MARKETING_VERSION = "v0.1.17-BETA1";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stonly.example.wikipedia.test;
 				PRODUCT_MODULE_NAME = Wikipedia;
@@ -18435,7 +18487,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = v0.1.12;
+				MARKETING_VERSION = "v0.1.17-BETA1";
 				PRODUCT_BUNDLE_IDENTIFIER = org.wikimedia.wikipedia;
 				PRODUCT_MODULE_NAME = Wikipedia;
 				PRODUCT_NAME = Wikipedia;
@@ -18703,7 +18755,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = v0.1.12;
+				MARKETING_VERSION = "v0.1.17-BETA1";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = org.wikimedia.wikipedia;
 				PRODUCT_MODULE_NAME = Wikipedia;

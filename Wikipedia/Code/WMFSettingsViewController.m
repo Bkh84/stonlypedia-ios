@@ -9,6 +9,7 @@
 #import "UIViewController+WMFStoryboardUtilities.h"
 #import "WMFDailyStatsLoggingFunnel.h"
 
+@import Stonly;
 #pragma mark - Static URLs
 
 static const NSString *kvo_WMFSettingsViewController_authManager_loggedInUsername = nil;
@@ -273,6 +274,18 @@ static NSString *const WMFSettingsURLDonation = @"https://donate.wikimedia.org/?
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
     switch (cell.tag) {
+        case WMFSettingsMenuItemType_StonlySettingsDev:
+            [self changeDev];
+            break;
+        case WMFSettingsMenuItemType_StonlySettingsDemo:
+            [self changeDemo];
+            break;
+        case WMFSettingsMenuItemType_StonlySettingsQA:
+            [self changeQA];
+            break;
+        case WMFSettingsMenuItemType_StonlySettingsSupport:
+            [self changeSupport];
+            break;
         case WMFSettingsMenuItemType_LoginAccount:
             [self showLoginOrAccount];
             break;
@@ -380,6 +393,23 @@ static NSString *const WMFSettingsURLDonation = @"https://donate.wikimedia.org/?
         [[LoginFunnel shared] logLoginStartInSettings];
     }
 }
+
+-(void)changeDev {
+    StonlyWidget.widgetId = @"9b4f9dd5-d306-11e9-a307-06e18af4fc90";
+}
+
+-(void)changeDemo {
+    StonlyWidget.widgetId = @"d5d69173-f883-11ec-9fb8-0ae9fa2a18a2";
+}
+
+-(void)changeQA {
+    StonlyWidget.widgetId = @"f649afa1-8144-11ed-871a-0a52ff1ec764";
+}
+
+-(void)changeSupport {
+    StonlyWidget.widgetId = @"d4c05b35-0ea3-11ee-a0af-0a52ff1ec764";
+}
+
 
 #pragma mark - Clear Cache
 
@@ -525,7 +555,7 @@ static NSString *const WMFSettingsURLDonation = @"https://donate.wikimedia.org/?
 
 - (void)loadSections {
     self.sections = [[NSMutableArray alloc] init];
-
+    [self.sections addObject:[self section_stonly]];
     [self.sections addObject:[self section_1]];
     [self.sections addObject:[self section_2]];
     [self.sections addObject:[self section_3]];
@@ -534,6 +564,17 @@ static NSString *const WMFSettingsURLDonation = @"https://donate.wikimedia.org/?
 }
 
 #pragma mark - Section structure
+
+- (WMFSettingsTableViewSection *)section_stonly {
+    NSArray *items = @[[WMFSettingsMenuItem itemForType:WMFSettingsMenuItemType_StonlySettingsDev],
+                       [WMFSettingsMenuItem itemForType:WMFSettingsMenuItemType_StonlySettingsDemo],
+                       [WMFSettingsMenuItem itemForType:WMFSettingsMenuItemType_StonlySettingsQA],
+                       [WMFSettingsMenuItem itemForType:WMFSettingsMenuItemType_StonlySettingsSupport]];
+    WMFSettingsTableViewSection *section = [[WMFSettingsTableViewSection alloc] initWithItems:items
+                                                                                  headerTitle:@"Stonly"
+                                                                                   footerText:nil];
+    return section;
+}
 
 - (WMFSettingsTableViewSection *)section_1 {
     NSArray *items = @[[WMFSettingsMenuItem itemForType:WMFSettingsMenuItemType_LoginAccount],

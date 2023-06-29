@@ -41,8 +41,48 @@
                 [[WMFSettingsMenuItem alloc] initWithType:type
                                                     title:WMFLocalizedStringWithDefaultValue(@"settings-support", nil, nil, @"Support Wikipedia", @"Title for button letting user make a donation.")
                                                  iconName:@"settings-support"
-                                                iconColor:[UIColor wmf_colorWithHex:0xFF1B33]
+                                                iconColor:[UIColor wmf_colorWithHex:0x00FF00]
                                            disclosureType:WMFSettingsMenuItemDisclosureType_ExternalLink
+                                           disclosureText:nil
+                                               isSwitchOn:NO];
+        }
+        case WMFSettingsMenuItemType_StonlySettingsDev: {
+            return
+                [[WMFSettingsMenuItem alloc] initWithType:type
+                                                    title:WMFLocalizedStringWithDefaultValue(@"settings-stonly-dev", nil, nil, @"Stonly Dev", @"Title for button letting user make a donation.")
+                                                 iconName:@"settings-support"
+                                                iconColor:[UIColor wmf_colorWithHex:0x0000FF]
+                                           disclosureType:WMFSettingsMenuItemDisclosureType_None
+                                           disclosureText:nil
+                                               isSwitchOn:NO];
+        }
+        case WMFSettingsMenuItemType_StonlySettingsDemo: {
+            return
+                [[WMFSettingsMenuItem alloc] initWithType:type
+                                                    title:WMFLocalizedStringWithDefaultValue(@"settings-stonly-demo", nil, nil, @"Stonly Demo", @"Title for button letting user make a donation.")
+                                                 iconName:@"settings-support"
+                                                iconColor:[UIColor wmf_colorWithHex:0xFFFF00]
+                                           disclosureType:WMFSettingsMenuItemDisclosureType_None
+                                           disclosureText:nil
+                                               isSwitchOn:NO];
+        }
+        case WMFSettingsMenuItemType_StonlySettingsQA: {
+            return
+                [[WMFSettingsMenuItem alloc] initWithType:type
+                                                    title:WMFLocalizedStringWithDefaultValue(@"settings-stonly-qa", nil, nil, @"Stonly QA", @"Title for button letting user make a donation.")
+                                                 iconName:@"settings-support"
+                                                iconColor:[UIColor wmf_colorWithHex:0x00FFFF]
+                                           disclosureType:WMFSettingsMenuItemDisclosureType_None
+                                           disclosureText:nil
+                                               isSwitchOn:NO];
+        }
+        case WMFSettingsMenuItemType_StonlySettingsSupport: {
+            return
+                [[WMFSettingsMenuItem alloc] initWithType:type
+                                                    title:WMFLocalizedStringWithDefaultValue(@"settings-stonly-support", nil, nil, @"Stonly Support", @"Title for button letting user make a donation.")
+                                                 iconName:@"settings-support"
+                                                iconColor:[UIColor wmf_colorWithHex:0xFF1B33]
+                                           disclosureType:WMFSettingsMenuItemDisclosureType_None
                                            disclosureText:nil
                                                isSwitchOn:NO];
         }

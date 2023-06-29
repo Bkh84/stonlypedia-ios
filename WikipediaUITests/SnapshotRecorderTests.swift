@@ -1,5 +1,4 @@
 import XCTest
-
 // Details: see `README.md` in same folder as this file.
 
 class WikipediaUITests: XCTestCase {

@@ -24,7 +24,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>v0.1.12</string>
+	<string>v0.1.18-BETA1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -47,14 +47,10 @@
 			<string>com.stonly</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>stonly-oo2vnvw4lf</string>
-				<string>stonly-stonlypedia</string>
-				<string>stonly-zhxao6ruqn</string>
-				<string>stonly-v0qfld6cbr</string>
-				<string>stonly-0fnuhbe8pr</string>
 				<string>stonly-zjhgfcrpqt</string>
-				<string>stonly-vfnf8ugzd0</string>
-				<string>stonly-uyvwmyos33</string>
+				<string>stonly-oo2vnvw4lf</string>
+				<string>stonly-7qmoiwj3i5</string>
+				<string>stonly-pe8io8wdyt</string>
 			</array>
 		</dict>
 	</array>

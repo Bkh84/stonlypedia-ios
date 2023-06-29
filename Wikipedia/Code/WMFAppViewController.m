@@ -903,7 +903,7 @@ NSString *const WMFLanguageVariantAlertsLibraryVersion = @"WMFLanguageVariantAle
                                                            }];
         } else if ([self shouldShowExploreScreenOnLaunch]) {
             [self hideSplashViewAnimated:!didShowOnboarding];
-            [self showExplore];
+            [self showStonlySettings:true];
             done();
         } else {
             [self hideSplashViewAnimated:true];
@@ -1538,6 +1538,7 @@ static NSString *const WMFDidShowOnboarding = @"DidShowOnboarding5.3";
 #pragma mark - Splash
 
 - (void)showSplashView {
+    printf("remy123");
     [(WMFRootNavigationController *)self.navigationController showSplashView];
 }
 
@@ -2021,8 +2022,33 @@ static NSString *const WMFDidShowOnboarding = @"DidShowOnboarding5.3";
     }
 }
 
+- (void)showStonlySettingsWithSubViewController:(nullable UIViewController *)subViewController animated:(BOOL)animated {
+    NSParameterAssert(self.dataStore);
+    [self dismissPresentedViewControllers];
+
+    if (subViewController) {
+        [self.settingsNavigationController pushViewController:subViewController animated:NO];
+    }
+
+    switch ([NSUserDefaults standardUserDefaults].defaultTabType) {
+        case WMFAppDefaultTabTypeSettings:
+            [self setSelectedIndex:WMFAppTabTypeMain];
+            if (subViewController) {
+                [self wmf_pushViewController:subViewController animated:animated];
+            }
+            break;
+        default:
+            [self presentViewController:self.settingsNavigationController animated:animated completion:nil];
+            break;
+    }
+}
+
 - (void)showSettingsAnimated:(BOOL)animated {
     [self showSettingsWithSubViewController:nil animated:animated];
+}
+
+- (void)showStonlySettings:(BOOL)animated {
+    [self showStonlySettingsWithSubViewController:nil animated:animated];
 }
 
 #pragma mark - WMFReadingListsAlertPresenter

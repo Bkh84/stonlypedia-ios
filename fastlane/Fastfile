@@ -24,6 +24,12 @@ lane :distribute do
     build
     firebase_app_distribution(
         app: firebase_app_id,
-        release_notes: "v0.1.12",
+        release_notes: "v0.1.18-BETA1",
     )
+end
+
+lane :test do
+    
+    run_tests(workspace: "StonlyPedia.xcworkspace",
+            scheme: "UITests")
 end

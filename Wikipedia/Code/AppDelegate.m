@@ -78,8 +78,18 @@ static NSString *const WMFBackgroundDatabaseHousekeeperTaskIdentifier = @"org.wi
     }
 #endif
     
-    StonlyWidget.widgetId = @"d5d69173-f883-11ec-9fb8-0ae9fa2a18a2";
+    //DEMO
+    //StonlyWidget.widgetId = @"d5d69173-f883-11ec-9fb8-0ae9fa2a18a2";
 
+    //Test
+    //StonlyWidget.widgetId = @"4a62f158-9efd-11e9-a307-06e18af4fc90";
+    
+    //Automate Test
+    //StonlyWidget.widgetId = @"f649afa1-8144-11ed-871a-0a52ff1ec764";
+    
+    //Support
+    StonlyWidget.widgetId = @"d4c05b35-0ea3-11ee-a0af-0a52ff1ec764";
+    
     [[NSUserDefaults standardUserDefaults] wmf_migrateFontSizeMultiplier];
     NSUserDefaults.standardUserDefaults.shouldRestoreNavigationStackOnResume = [self shouldRestoreNavigationStackOnResumeAfterBecomingActive:[NSDate date]];
 
